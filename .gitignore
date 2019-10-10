@@ -1,3 +1,4 @@
 credentials.py
 .vscode/
 jonienv/
+__pycache__/
