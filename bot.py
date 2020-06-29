@@ -20,5 +20,5 @@ auth.set_access_token(cd.ACCESS_KEY, cd.ACCESS_SECRET)
 api = tweepy.API(auth)
 
 # Create a tweet
-api.update_status("is this thing on")
-print("done")
+# api.update_status("is this thing on")
+# print("done")
