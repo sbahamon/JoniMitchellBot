@@ -103,34 +103,4 @@ def get_lyrics_tweet(lyrics):
         tweet += lyrics.splitlines()[start] + "\n"
         start += 1
 
-    print(tweet)
-    print(len(tweet))
-
     return tweet
-
-
-def main():
-    # Example searches
-    term = 'Joni Mitchell'
-    artist_id = 989
-
-    # Grabs all song id's from artist and saves them to text file
-    # songs = get_song_id(989)
-    # with open('songs.txt', 'w') as outfile:
-    #     json.dump(songs, outfile)
-
-    lucky_song = random.randint(1,277)
-    # print(songs[lucky_song])
-    # print(retrieve_lyrics(songs[lucky_song]))
-    get_lyrics_tweet(retrieve_lyrics(songs[lucky_song]))
-
-
-
-    # Get meta information about songs
-    #song_list = get_song_information(songs_ids)
-
-
-
-
-if __name__ == "__main__":
-    main()
