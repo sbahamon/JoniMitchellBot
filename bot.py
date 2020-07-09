@@ -1,22 +1,22 @@
 import requests
 import tweepy
 from os import environ
-import credentials as cd
+# import credentials as cd
 
 from genius import *
 
 
 # local authentication
-consumerKey = credentials.consumerKey
-consumerSecret = credentials.consumerSecret
-twitterApiKey = credentials.twitterApiKey
-twitterApiSecretKey = credentials.twitterApiSecretKey
+# consumerKey = credentials.consumerKey
+# consumerSecret = credentials.consumerSecret
+# twitterApiKey = credentials.twitterApiKey
+# twitterApiSecretKey = credentials.twitterApiSecretKey
 
 # heroku authentication
-# CONSUMER_KEY = environ['CONSUMER_KEY']
-# CONSUMER_SECRET = environ['CONSUMER_SECRET']
-# ACCESS_KEY = environ['ACCESS_KEY']
-# ACCESS_SECRET = environ['ACCESS_SECRET']
+consumerKey = environ['consumerKey']
+consumerSecret = environ['consumerSecret']
+twitterApiKey = environ['twitterApiKey']
+twitterApiSecretKey = environ['twitterApiSecretKey']
 
 
 def main():
@@ -34,12 +34,12 @@ def main():
     print(tweet)
 
     # local authentication
-    auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
-    auth.set_access_token(twitterApiKey, twitterApiSecretKey)
+    # auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
+    # auth.set_access_token(twitterApiKey, twitterApiSecretKey)
 
     # heroku authentication
-    # auth = tweepy.OAuthHandler(cd.CONSUMER_KEY, cd.CONSUMER_SECRET)
-    # auth.set_access_token(cd.ACCESS_KEY, cd.ACCESS_SECRET)
+    auth = tweepy.OAuthHandler(cd.CONSUMER_KEY, cd.CONSUMER_SECRET)
+    auth.set_access_token(cd.ACCESS_KEY, cd.ACCESS_SECRET)
 
     api = tweepy.API(auth)
     api.update_status(tweet)

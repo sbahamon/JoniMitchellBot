@@ -1,3 +1,5 @@
 tweepy
 requests
 bs4
+os
+flask
