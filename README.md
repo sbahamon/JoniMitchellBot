@@ -3,7 +3,7 @@
 Twitter bot meant to tweet random Joni Mitchell lyrics every hour on the half hour.
 Please feel free to fork this project and use it for your own twitter lyrics bot!
 
-## Built With
+## Tooling
 
 Bot is build in Python 3 using the following packages:
  - Tweepy for twitter authentication
