@@ -1,7 +1,7 @@
 import requests
 import tweepy
 from os import environ
-# import credentials as cd
+# import credentials
 
 from genius import *
 
@@ -34,12 +34,8 @@ def main():
     print(tweet)
 
     # local authentication
-    # auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
-    # auth.set_access_token(twitterApiKey, twitterApiSecretKey)
-
-    # heroku authentication
-    auth = tweepy.OAuthHandler(cd.CONSUMER_KEY, cd.CONSUMER_SECRET)
-    auth.set_access_token(cd.ACCESS_KEY, cd.ACCESS_SECRET)
+    auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
+    auth.set_access_token(twitterApiKey, twitterApiSecretKey)
 
     api = tweepy.API(auth)
     api.update_status(tweet)

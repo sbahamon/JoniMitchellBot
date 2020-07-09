@@ -12,7 +12,11 @@ from songs import songs
 
 # Constants
 base = "https://api.genius.com"
+
+# local auth
 # client_access_token = credentials.geniusToken
+
+# heroku auth
 client_access_token = environ['geniusToken']
 
 
