@@ -5,13 +5,16 @@ import json
 from bs4 import BeautifulSoup
 import random
 
-import credentials
+# import credentials
+from os import environ
 from songs import songs
 
 
 # Constants
 base = "https://api.genius.com"
-client_access_token = credentials.geniusToken
+# client_access_token = credentials.geniusToken
+client_access_token = environ['geniusToken']
+
 
 def get_json(path, params=None, headers=None):
     '''Send request and get response in json format.'''
